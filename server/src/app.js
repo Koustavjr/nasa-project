@@ -10,7 +10,9 @@ const cors=require('cors');
 const app=express();
 app.use(express.json());
 app.use(cors({
-    origin:'http://localhost:3000',
+  origin:['http://localhost:3000','https://nasa-project-frontend-pmwo.onrender.com'],
+   //origin:'https://nasa-project-frontend-pmwo.onrender.com'
+
 }));
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,'..','public')));
